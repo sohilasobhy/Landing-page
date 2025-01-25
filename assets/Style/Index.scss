@@ -1,0 +1,257 @@
+@import "_Variables";
+@import "_Fonts";
+@import "_Mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  .menuModal {
+    .filter {
+      &.filterHidden {
+        @include position(absolute, 0, null, null, -100%);
+        transition: 0.5s;
+      }
+      &.filterShow {
+        @include position(absolute, 0, null, null, 0);
+        transition: 0.5s;
+      }
+      background-color: rgba(0, 0, 0, 0.632);
+      width: 100%;
+      height: 100vh;
+    }
+    .menuItems {
+      height: 100%;
+      width: 250px;
+    }
+  }
+  .navLink {
+    @include text-style;
+    text-decoration: none;
+  }
+  .hero-section {
+    background-color: $bg-color;
+    .logo {
+      @media (min-width: 992px) {
+        width: 155px;
+      }
+      @media (max-width: 991.86) {
+        width: 135px;
+      }
+      @media (max-width: 768px) {
+        width: 115px;
+      }
+    }
+    i {
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .buttons {
+      .loginBtn {
+        @include text-style($primary-color);
+      }
+    }
+    .main {
+      h1 {
+        @media (min-width: 992px) {
+          @include text-style($secondry-color, 64px, 600);
+        }
+        @media (max-width: 991.86px) {
+          @include text-style($secondry-color, 50px, 600);
+        }
+        @media (max-width: 768px) {
+          @include text-style($secondry-color, 45px, 600);
+        }
+      }
+
+      span {
+        color: $primary-color;
+      }
+      p {
+        @include text-style(#717171, 16px, 400);
+      }
+      button {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+  .targetAudience {
+    .targetAudience_top {
+      h2 {
+        @include text-style($size: 36px);
+      }
+      p {
+        @include text-style(#717171, 16px, 400);
+      }
+    }
+    .targetAudience_bottom {
+      .oneCard {
+        @media (min-width: 992px) {
+          width: 19%;
+        }
+        @media (max-width: 991.86px) {
+          width: 30%;
+        }
+        @media (max-width: 768px) {
+          width: 60%;
+        }
+        .cardIcon {
+          .icon {
+            @include position(absolute, null, null, null, -16px);
+          }
+        }
+        .title {
+          @include text-style($size: 28px, $weight: 700);
+        }
+        .description {
+          @include text-style(#717171, 14px, 400);
+        }
+      }
+    }
+  }
+  .twoPartsSection {
+    .twoPartsSection-right {
+      h2 {
+        @include text-style($size: 36px);
+      }
+      p {
+        @include text-style(#717171, 14px, 400);
+      }
+      button {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+  .features {
+    background-color: $bg-color;
+    .left {
+      h2 {
+        @include text-style($size: 36px);
+        span {
+          color: $primary-color;
+        }
+      }
+      p {
+        @include text-style(#18191f, 16px, 400);
+      }
+    }
+    .right {
+      .iconCard {
+        .number {
+          @include text-style($size: 28px, $weight: 700);
+        }
+        .name {
+          @include text-style(#717171, 16px, 400);
+        }
+      }
+    }
+  }
+  .marketing {
+    .top {
+      @media (min-width: 992px) {
+        width: 60%;
+      }
+      @media (max-width: 991.86px) {
+        width: 80%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      h2 {
+        @include text-style($size: 36px);
+      }
+      p {
+        @include text-style($size: 16px, $weight: 400);
+      }
+    }
+    .bottom {
+      @media (min-width: 992px) {
+        gap: 1.5rem;
+      }
+      @media (max-width: 991.86px) {
+        gap: 8rem;
+      }
+      .text {
+        background-color: #f5f7fa;
+        border-radius: 0.5rem;
+        @include position(absolute, 75%, null, null, 5%);
+        width: 90%;
+        .firstText {
+          @include text-style($size: 20px, $color: #717171);
+        }
+        .secondText {
+          @include text-style($size: 20px, $color: $primary-color);
+        }
+      }
+    }
+  }
+  footer {
+    margin-top: 10rem;
+    background-color: #263238;
+    .left {
+      .copyRights {
+        p {
+          @include text-style(#f5f7fa, 14px, 400);
+        }
+      }
+      .socialIcons {
+        .round {
+          background-color: #3b464c;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .right {
+      @media (min-width: 992px) {
+        gap: 7rem;
+      }
+      @media (max-width: 991.86px) {
+        gap: 4rem;
+      }
+      .title {
+        @include text-style(#ffffff, 20px, 600);
+      }
+      .content {
+        a {
+          text-decoration: none;
+          @include text-style(#f5f7fa, 14px, 400);
+        }
+        input {
+          border-radius: 0.5rem;
+          background-color: #515b60;
+          border-color: #515b60;
+          outline-color: #515b60;
+          &::placeholder {
+            @include text-style(#d9dbe1, 13px, 400);
+          }
+        }
+        i {
+          color: #ffffff;
+          @include position(absolute, 6px, 30%, null, null);
+        }
+      }
+    }
+  }
+}

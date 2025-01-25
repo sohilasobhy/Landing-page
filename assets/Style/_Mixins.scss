@@ -1,0 +1,28 @@
+@mixin text-style($color: #4d4d4d, $size: 18px, $weight: 600) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin position(
+  $type: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  @if ($type != null) {
+    position: $type;
+  }
+  @if ($top != null) {
+    top: $top;
+  }
+  @if ($right != null) {
+    right: $right;
+  }
+  @if ($bottom != null) {
+    bottom: $bottom;
+  }
+  @if ($left != null) {
+    left: $left;
+  }
+}

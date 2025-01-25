@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../Fonts/Inter/Inter-VariableFont_opszwght.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+body .menuModal .filter {
+  background-color: rgba(0, 0, 0, 0.632);
+  width: 100%;
+  height: 100vh;
+}
+body .menuModal .filter.filterHidden {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+body .menuModal .filter.filterShow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+body .menuModal .menuItems {
+  height: 100%;
+  width: 250px;
+}
+body .navLink {
+  color: #4d4d4d;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+body .hero-section {
+  background-color: #f5f7fa;
+}
+@media (min-width: 992px) {
+  body .hero-section .logo {
+    width: 155px;
+  }
+}
+@media (max-width: 991.86) {
+  body .hero-section .logo {
+    width: 135px;
+  }
+}
+@media (max-width: 768px) {
+  body .hero-section .logo {
+    width: 115px;
+  }
+}
+body .hero-section i {
+  font-size: 30px;
+  cursor: pointer;
+}
+body .hero-section .buttons .loginBtn {
+  color: #4caf4f;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  body .hero-section .main h1 {
+    color: #4d4d4d;
+    font-size: 64px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 991.86px) {
+  body .hero-section .main h1 {
+    color: #4d4d4d;
+    font-size: 50px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  body .hero-section .main h1 {
+    color: #4d4d4d;
+    font-size: 45px;
+    font-weight: 600;
+  }
+}
+body .hero-section .main span {
+  color: #4caf4f;
+}
+body .hero-section .main p {
+  color: #717171;
+  font-size: 16px;
+  font-weight: 400;
+}
+body .hero-section .main button {
+  background-color: #4caf4f;
+  border-color: #4caf4f;
+}
+body .targetAudience .targetAudience_top h2 {
+  color: #4d4d4d;
+  font-size: 36px;
+  font-weight: 600;
+}
+body .targetAudience .targetAudience_top p {
+  color: #717171;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  body .targetAudience .targetAudience_bottom .oneCard {
+    width: 19%;
+  }
+}
+@media (max-width: 991.86px) {
+  body .targetAudience .targetAudience_bottom .oneCard {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  body .targetAudience .targetAudience_bottom .oneCard {
+    width: 60%;
+  }
+}
+body .targetAudience .targetAudience_bottom .oneCard .cardIcon .icon {
+  position: absolute;
+  left: -16px;
+}
+body .targetAudience .targetAudience_bottom .oneCard .title {
+  color: #4d4d4d;
+  font-size: 28px;
+  font-weight: 700;
+}
+body .targetAudience .targetAudience_bottom .oneCard .description {
+  color: #717171;
+  font-size: 14px;
+  font-weight: 400;
+}
+body .twoPartsSection .twoPartsSection-right h2 {
+  color: #4d4d4d;
+  font-size: 36px;
+  font-weight: 600;
+}
+body .twoPartsSection .twoPartsSection-right p {
+  color: #717171;
+  font-size: 14px;
+  font-weight: 400;
+}
+body .twoPartsSection .twoPartsSection-right button {
+  background-color: #4caf4f;
+  border-color: #4caf4f;
+}
+body .features {
+  background-color: #f5f7fa;
+}
+body .features .left h2 {
+  color: #4d4d4d;
+  font-size: 36px;
+  font-weight: 600;
+}
+body .features .left h2 span {
+  color: #4caf4f;
+}
+body .features .left p {
+  color: #18191f;
+  font-size: 16px;
+  font-weight: 400;
+}
+body .features .right .iconCard .number {
+  color: #4d4d4d;
+  font-size: 28px;
+  font-weight: 700;
+}
+body .features .right .iconCard .name {
+  color: #717171;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  body .marketing .top {
+    width: 60%;
+  }
+}
+@media (max-width: 991.86px) {
+  body .marketing .top {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  body .marketing .top {
+    width: 100%;
+  }
+}
+body .marketing .top h2 {
+  color: #4d4d4d;
+  font-size: 36px;
+  font-weight: 600;
+}
+body .marketing .top p {
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  body .marketing .bottom {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 991.86px) {
+  body .marketing .bottom {
+    gap: 8rem;
+  }
+}
+body .marketing .bottom .text {
+  background-color: #f5f7fa;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  width: 90%;
+}
+body .marketing .bottom .text .firstText {
+  color: #717171;
+  font-size: 20px;
+  font-weight: 600;
+}
+body .marketing .bottom .text .secondText {
+  color: #4caf4f;
+  font-size: 20px;
+  font-weight: 600;
+}
+body footer {
+  margin-top: 10rem;
+  background-color: #263238;
+}
+body footer .left .copyRights p {
+  color: #f5f7fa;
+  font-size: 14px;
+  font-weight: 400;
+}
+body footer .left .socialIcons .round {
+  background-color: #3b464c;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 992px) {
+  body footer .right {
+    gap: 7rem;
+  }
+}
+@media (max-width: 991.86px) {
+  body footer .right {
+    gap: 4rem;
+  }
+}
+body footer .right .title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+body footer .right .content a {
+  text-decoration: none;
+  color: #f5f7fa;
+  font-size: 14px;
+  font-weight: 400;
+}
+body footer .right .content input {
+  border-radius: 0.5rem;
+  background-color: #515b60;
+  border-color: #515b60;
+  outline-color: #515b60;
+}
+body footer .right .content input::-moz-placeholder {
+  color: #d9dbe1;
+  font-size: 13px;
+  font-weight: 400;
+}
+body footer .right .content input::placeholder {
+  color: #d9dbe1;
+  font-size: 13px;
+  font-weight: 400;
+}
+body footer .right .content i {
+  color: #ffffff;
+  position: absolute;
+  top: 6px;
+  right: 30%;
+}/*# sourceMappingURL=Index.css.map */
