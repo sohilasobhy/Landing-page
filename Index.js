@@ -1,11 +1,15 @@
 
-document.getElementById('closeBtn').addEventListener('click', function () {
-    const filter = document.getElementById('filter');
-    filter.classList.remove("filterShow")
-    filter.classList.add("filterHidden")
-})
-document.getElementById('openMenuModal').addEventListener('click', function () {
-    const filter = document.getElementById('filter');
-    filter.classList.remove("filterHidden")
-    filter.classList.add("filterShow")
-})
+AOS.init();
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    const menu = document.getElementById('navbarSupportedContent');
+    menu.classList.add('show');
+    menu.classList.add('animate__fadeInLeft');
+});
+document.getElementById('closeMenu').addEventListener('click', function () {
+    const menu = document.getElementById('navbarSupportedContent');
+    menu.classList.remove('show');
+    menu.classList.remove('animate__fadeInLeft');
+
+});
+
+
