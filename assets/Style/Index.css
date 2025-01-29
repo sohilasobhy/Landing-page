@@ -1,7 +1,12 @@
 @font-face {
   font-family: "Inter";
-  src: url(../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+  src: url(../Fonts/Inter/Inter-VariableFont_opszwght.ttf);
 }
+[dir=rtl] {
+  font-family: "Cairo";
+  src: url(../Fonts/Cairo/Cairo-Regular.woff);
+}
+
 @keyframes shakeAnimation {
   0%, 100% {
     transform: translateY(0);
@@ -36,23 +41,33 @@ ul {
   margin: 0;
 }
 
-.sideMenu.show {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 250px;
-  background-color: white;
-  transition: left 0.3s ease-in-out;
-  z-index: 999;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  left: 0;
-  padding-top: 1rem;
-  padding-left: 1rem;
+@media (max-width: 992px) {
+  .sideMenu.show {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    left: 0;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  [dir=rtl] .sideMenu.show {
+    right: 0;
+    padding-left: auto;
+    padding-right: 1rem;
+  }
 }
 
 body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
+}
+[dir=rtl] body {
+  font-family: "Cairo", sans-serif;
 }
 body .collapse .show {
   width: 10px;
@@ -463,6 +478,9 @@ body footer .right .content input {
   padding: 0.25rem 2rem 0.25rem 0.5rem;
   color: #d9dbe1;
 }
+[dir=rtl] body footer .right .content input {
+  padding: 0.25rem 0.5rem 0.25rem 2rem;
+}
 body footer .right .content input::-moz-placeholder {
   color: #d9dbe1;
   font-size: 13px;
@@ -493,6 +511,11 @@ body footer .right .content i {
     top: 6px;
     right: 13%;
   }
+  [dir=rtl] body footer .right .content i {
+    position: absolute;
+    top: 6px;
+    left: 13%;
+  }
 }
 @media (max-width: 991.86px) {
   body footer .right .content i {
@@ -500,11 +523,21 @@ body footer .right .content i {
     top: 6px;
     right: 6%;
   }
+  [dir=rtl] body footer .right .content i {
+    position: absolute;
+    top: 6px;
+    left: 6%;
+  }
 }
 @media (max-width: 768px) {
   body footer .right .content i {
     position: absolute;
     top: 6px;
     right: 22%;
+  }
+  [dir=rtl] body footer .right .content i {
+    position: absolute;
+    top: 6px;
+    left: 22%;
   }
 }/*# sourceMappingURL=Index.css.map */

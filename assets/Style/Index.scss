@@ -37,21 +37,32 @@ ul {
   margin: 0;
 }
 .sideMenu.show {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 250px;
-  background-color: white;
-  transition: left 0.3s ease-in-out;
-  z-index: 999;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  left: 0;
-  padding-top: 1rem;
-  padding-left: 1rem;
+  @media (max-width: 992px) {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    left: 0;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    [dir="rtl"] & {
+      right: 0;
+      padding-left: auto;
+      padding-right: 1rem;
+    }
+  }
 }
+
 body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
+  [dir="rtl"] & {
+    font-family: "Cairo", sans-serif;
+  }
   .collapse {
     .show {
       width: 10px;
@@ -362,6 +373,9 @@ body {
           border-color: #515b60;
           padding: 0.25rem 2rem 0.25rem 0.5rem;
           color: #d9dbe1;
+          [dir="rtl"] & {
+            padding: 0.25rem 0.5rem 0.25rem 2rem;
+          }
           &::placeholder {
             @include text-style(#d9dbe1, 13px, 400);
           }
@@ -377,12 +391,21 @@ body {
           cursor: pointer;
           @media (min-width: 992px) {
             @include position(absolute, 6px, 13%, null, null);
+            [dir="rtl"] & {
+              @include position(absolute, 6px, null, null, 13%);
+            }
           }
           @media (max-width: 991.86px) {
             @include position(absolute, 6px, 6%, null, null);
+            [dir="rtl"] & {
+              @include position(absolute, 6px, null, null, 6%);
+            }
           }
           @media (max-width: 768px) {
             @include position(absolute, 6px, 22%, null, null);
+            [dir="rtl"] & {
+              @include position(absolute, 6px, null, null, 22%);
+            }
           }
         }
       }

@@ -1,4 +1,8 @@
 @font-face {
   font-family: "Inter";
-  src: url(../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+  src: url(../Fonts/Inter/Inter-VariableFont_opsz\wght.ttf);
+}
+[dir="rtl"] {
+  font-family: "Cairo";
+  src: url(../Fonts/Cairo/Cairo-Regular.woff);
 }
