@@ -63,6 +63,18 @@ body {
   [dir="rtl"] & {
     font-family: "Cairo", sans-serif;
   }
+  @media (max-width: 992px) {
+    &.show {
+      overflow: hidden;
+      .filter {
+        @include position(fixed, 0, 0, null, null);
+        background-color: rgba(0, 0, 0, 0.596);
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+  }
   .collapse {
     .show {
       width: 10px;
@@ -70,25 +82,6 @@ body {
   }
   .navbar-toggler-icon {
     font-size: 18px;
-  }
-  .menuModal {
-    .filter {
-      &.filterHidden {
-        @include position(absolute, 0, null, null, -100%);
-        transition: 0.5s;
-      }
-      &.filterShow {
-        @include position(absolute, 0, null, null, 0);
-        transition: 0.5s;
-      }
-      background-color: rgba(0, 0, 0, 0.632);
-      width: 100%;
-      height: 100vh;
-    }
-    .menuItems {
-      height: 100%;
-      width: 250px;
-    }
   }
   .navLink {
     @include text-style;
@@ -130,6 +123,9 @@ body {
       h1 {
         @media (min-width: 992px) {
           @include text-style($secondry-color, 64px, 600);
+          [dir="rtl"] & {
+            width: 64%;
+          }
         }
         @media (max-width: 991.86px) {
           @include text-style($secondry-color, 45px, 600);

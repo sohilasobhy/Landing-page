@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url(../Fonts/Inter/Inter-VariableFont_opszwght.ttf);
+  src: url(../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
 [dir=rtl] {
   font-family: "Cairo";
@@ -69,32 +69,25 @@ body {
 [dir=rtl] body {
   font-family: "Cairo", sans-serif;
 }
+@media (max-width: 992px) {
+  body.show {
+    overflow: hidden;
+  }
+  body.show .filter {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.596);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+  }
+}
 body .collapse .show {
   width: 10px;
 }
 body .navbar-toggler-icon {
   font-size: 18px;
-}
-body .menuModal .filter {
-  background-color: rgba(0, 0, 0, 0.632);
-  width: 100%;
-  height: 100vh;
-}
-body .menuModal .filter.filterHidden {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  transition: 0.5s;
-}
-body .menuModal .filter.filterShow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-}
-body .menuModal .menuItems {
-  height: 100%;
-  width: 250px;
 }
 body .navLink {
   color: #4d4d4d;
@@ -156,6 +149,9 @@ body .hero-section i {
     color: #4d4d4d;
     font-size: 64px;
     font-weight: 600;
+  }
+  [dir=rtl] body .hero-section .main h1 {
+    width: 64%;
   }
 }
 @media (max-width: 991.86px) {
