@@ -1,7 +1,13 @@
 @mixin text-style($color: #4d4d4d, $size: 18px, $weight: 600) {
-  color: $color;
-  font-size: $size;
-  font-weight: $weight;
+  @if ($color != null) {
+    color: $color;
+  }
+  @if ($size != null) {
+    font-size: $size;
+  }
+  @if ($weight != null) {
+    font-weight: $weight;
+  }
 }
 @mixin position(
   $type: null,

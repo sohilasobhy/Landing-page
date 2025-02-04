@@ -59,7 +59,9 @@ ul {
 
 body {
   overflow-x: hidden;
-  font-family: "Inter", sans-serif;
+  [dir="ltr"] & {
+    font-family: "Inter", sans-serif;
+  }
   [dir="rtl"] & {
     font-family: "Cairo", sans-serif;
   }
@@ -91,9 +93,6 @@ body {
     background-color: $bg-color;
     .logo {
       cursor: pointer;
-      @media (min-width: 992px) {
-        width: 155px;
-      }
       @media (max-width: 991.86) {
         width: 135px;
       }
@@ -109,29 +108,30 @@ body {
       .loginBtn,
       .SignBtn {
         @media (min-width: 992px) {
-          @include text-style($primary-color);
+          @include text-style($color: $primary-color, $weight: 600);
         }
-        @media (max-width: 991.86px) {
-          @include text-style($primary-color, 16px, 600);
+        @media (max-width: 991.86px) and (min-width: 768px) {
+          @include text-style($size: 16px);
         }
         @media (max-width: 768px) {
-          @include text-style($primary-color, 12px, 600);
+          @include text-style($size: 12px);
         }
       }
     }
     .main {
       h1 {
+        @include text-style($secondry-color, null, 600);
         @media (min-width: 992px) {
-          @include text-style($secondry-color, 64px, 600);
+          @include text-style(null, 64px, null);
           [dir="rtl"] & {
             width: 64%;
           }
         }
-        @media (max-width: 991.86px) {
-          @include text-style($secondry-color, 45px, 600);
+        @media (max-width: 991.86px) and (min-width: 767px) {
+          @include text-style(null, 45px, null);
         }
         @media (max-width: 768px) {
-          @include text-style($secondry-color, 30px, 600);
+          @include text-style(null, 30px, null);
         }
       }
       .mainImg {
@@ -155,17 +155,17 @@ body {
   .targetAudience {
     .targetAudience_top {
       h2 {
-        text-align: center;
+        @include text-style($secondry-color, null, 400);
         @media (min-width: 992px) {
-          @include text-style($size: 36px);
+          @include text-style(null, 36px, null);
           width: 42%;
         }
-        @media (max-width: 991.86px) {
-          @include text-style($size: 30px);
+        @media (max-width: 991.86px) and (min-width: 767px) {
+          @include text-style(null, 30px, null);
           width: 70%;
         }
         @media (max-width: 768px) {
-          @include text-style($size: 25px);
+          @include text-style(null, 25px, null);
           width: 100%;
         }
       }
@@ -181,7 +181,7 @@ body {
         @media (min-width: 992px) {
           width: 25%;
         }
-        @media (max-width: 991.86px) {
+        @media (max-width: 991.86px) and (min-width: 767px) {
           width: 30%;
         }
         @media (max-width: 768px) {
@@ -203,14 +203,15 @@ body {
           }
         }
         .title {
+          @include text-style($secondry-color, null, 700);
           @media (min-width: 992px) {
-            @include text-style($size: 28px, $weight: 700);
+            @include text-style(null, 28px, null);
           }
-          @media (max-width: 991.86px) {
-            @include text-style($size: 24px, $weight: 700);
+          @media (max-width: 991.86px) and (min-width: 767px) {
+            @include text-style(null, 24px, null);
           }
           @media (max-width: 768px) {
-            @include text-style($size: 20px, $weight: 700);
+            @include text-style(null, 20px, null);
           }
         }
         .description {
@@ -222,14 +223,15 @@ body {
   .twoPartsSection {
     .twoPartsSection-right {
       h2 {
+        @include text-style($secondry-color, null, 400);
         @media (min-width: 992px) {
-          @include text-style($size: 36px);
+          @include text-style(null, 36px, null);
         }
-        @media (max-width: 991.86px) {
-          @include text-style($size: 30px);
+        @media (max-width: 991.86px) and (min-width: 767px) {
+          @include text-style(null, 30px, null);
         }
         @media (max-width: 768px) {
-          @include text-style($size: 25px);
+          @include text-style(null, 25px null);
         }
       }
       p {
@@ -245,14 +247,15 @@ body {
     background-color: $bg-color;
     .left {
       h2 {
+        @include text-style($secondry-color, null, 400);
         @media (min-width: 992px) {
-          @include text-style($size: 36px);
+          @include text-style(null, 36px, null);
         }
-        @media (max-width: 991.86px) {
-          @include text-style($size: 30px);
+        @media (max-width: 991.86px) and (min-width: 767px) {
+          @include text-style(null, 30px, null);
         }
         @media (max-width: 768px) {
-          @include text-style($size: 25px);
+          @include text-style(null, 25px, null);
         }
         span {
           color: $primary-color;
@@ -265,14 +268,15 @@ body {
     .right {
       .iconCard {
         .number {
+          @include text-style($secondry-color, null, 700);
           @media (min-width: 992px) {
-            @include text-style($size: 28px, $weight: 700);
+            @include text-style(null, 28px, null);
           }
-          @media (max-width: 991.86px) {
-            @include text-style($size: 24px, $weight: 700);
+          @media (max-width: 991.86px) and (min-width: 767px) {
+            @include text-style(null, 24px, null);
           }
           @media (max-width: 768px) {
-            @include text-style($size: 20px, $weight: 700);
+            @include text-style(null, 20px, null);
           }
         }
         .name {
@@ -290,7 +294,7 @@ body {
           @include text-style($size: 36px);
         }
       }
-      @media (max-width: 991.86px) {
+      @media (max-width: 991.86px) and (min-width: 767px) {
         width: 80%;
         h2 {
           @include text-style($size: 30px);
@@ -391,7 +395,7 @@ body {
               @include position(absolute, 6px, null, null, 13%);
             }
           }
-          @media (max-width: 991.86px) {
+          @media (max-width: 991.86px) and (min-width: 767px) {
             @include position(absolute, 6px, 6%, null, null);
             [dir="rtl"] & {
               @include position(absolute, 6px, null, null, 6%);

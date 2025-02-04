@@ -2,11 +2,10 @@
   font-family: "Inter";
   src: url(../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
-[dir=rtl] {
+@font-face {
   font-family: "Cairo";
   src: url(../Fonts/Cairo/Cairo-Regular.woff);
 }
-
 @keyframes shakeAnimation {
   0%, 100% {
     transform: translateY(0);
@@ -64,6 +63,8 @@ ul {
 
 body {
   overflow-x: hidden;
+}
+[dir=ltr] body {
   font-family: "Inter", sans-serif;
 }
 [dir=rtl] body {
@@ -101,11 +102,6 @@ body .hero-section {
 body .hero-section .logo {
   cursor: pointer;
 }
-@media (min-width: 992px) {
-  body .hero-section .logo {
-    width: 155px;
-  }
-}
 @media (max-width: 991.86) {
   body .hero-section .logo {
     width: 135px;
@@ -128,10 +124,10 @@ body .hero-section i {
     font-weight: 600;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 768px) {
   body .hero-section .buttons .loginBtn,
   body .hero-section .buttons .SignBtn {
-    color: #4caf4f;
+    color: #4d4d4d;
     font-size: 16px;
     font-weight: 600;
   }
@@ -139,33 +135,31 @@ body .hero-section i {
 @media (max-width: 768px) {
   body .hero-section .buttons .loginBtn,
   body .hero-section .buttons .SignBtn {
-    color: #4caf4f;
+    color: #4d4d4d;
     font-size: 12px;
     font-weight: 600;
   }
 }
+body .hero-section .main h1 {
+  color: #4d4d4d;
+  font-weight: 600;
+}
 @media (min-width: 992px) {
   body .hero-section .main h1 {
-    color: #4d4d4d;
     font-size: 64px;
-    font-weight: 600;
   }
   [dir=rtl] body .hero-section .main h1 {
     width: 64%;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .hero-section .main h1 {
-    color: #4d4d4d;
     font-size: 45px;
-    font-weight: 600;
   }
 }
 @media (max-width: 768px) {
   body .hero-section .main h1 {
-    color: #4d4d4d;
     font-size: 30px;
-    font-weight: 600;
   }
 }
 body .hero-section .main .mainImg {
@@ -187,29 +181,24 @@ body .hero-section .main button {
   border-color: #4caf4f;
 }
 body .targetAudience .targetAudience_top h2 {
-  text-align: center;
+  color: #4d4d4d;
+  font-weight: 400;
 }
 @media (min-width: 992px) {
   body .targetAudience .targetAudience_top h2 {
-    color: #4d4d4d;
     font-size: 36px;
-    font-weight: 600;
     width: 42%;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .targetAudience .targetAudience_top h2 {
-    color: #4d4d4d;
     font-size: 30px;
-    font-weight: 600;
     width: 70%;
   }
 }
 @media (max-width: 768px) {
   body .targetAudience .targetAudience_top h2 {
-    color: #4d4d4d;
     font-size: 25px;
-    font-weight: 600;
     width: 100%;
   }
 }
@@ -228,7 +217,7 @@ body .targetAudience .targetAudience_bottom .oneCard {
     width: 25%;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .targetAudience .targetAudience_bottom .oneCard {
     width: 30%;
   }
@@ -252,25 +241,23 @@ body .targetAudience .targetAudience_bottom .oneCard .cardIcon .icon {
     width: 100%;
   }
 }
+body .targetAudience .targetAudience_bottom .oneCard .title {
+  color: #4d4d4d;
+  font-weight: 700;
+}
 @media (min-width: 992px) {
   body .targetAudience .targetAudience_bottom .oneCard .title {
-    color: #4d4d4d;
     font-size: 28px;
-    font-weight: 700;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .targetAudience .targetAudience_bottom .oneCard .title {
-    color: #4d4d4d;
     font-size: 24px;
-    font-weight: 700;
   }
 }
 @media (max-width: 768px) {
   body .targetAudience .targetAudience_bottom .oneCard .title {
-    color: #4d4d4d;
     font-size: 20px;
-    font-weight: 700;
   }
 }
 body .targetAudience .targetAudience_bottom .oneCard .description {
@@ -278,23 +265,22 @@ body .targetAudience .targetAudience_bottom .oneCard .description {
   font-size: 14px;
   font-weight: 400;
 }
+body .twoPartsSection .twoPartsSection-right h2 {
+  color: #4d4d4d;
+  font-weight: 400;
+}
 @media (min-width: 992px) {
   body .twoPartsSection .twoPartsSection-right h2 {
-    color: #4d4d4d;
     font-size: 36px;
-    font-weight: 600;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .twoPartsSection .twoPartsSection-right h2 {
-    color: #4d4d4d;
     font-size: 30px;
-    font-weight: 600;
   }
 }
 @media (max-width: 768px) {
   body .twoPartsSection .twoPartsSection-right h2 {
-    color: #4d4d4d;
     font-size: 25px;
     font-weight: 600;
   }
@@ -311,25 +297,23 @@ body .twoPartsSection .twoPartsSection-right button {
 body .features {
   background-color: #f5f7fa;
 }
+body .features .left h2 {
+  color: #4d4d4d;
+  font-weight: 400;
+}
 @media (min-width: 992px) {
   body .features .left h2 {
-    color: #4d4d4d;
     font-size: 36px;
-    font-weight: 600;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .features .left h2 {
-    color: #4d4d4d;
     font-size: 30px;
-    font-weight: 600;
   }
 }
 @media (max-width: 768px) {
   body .features .left h2 {
-    color: #4d4d4d;
     font-size: 25px;
-    font-weight: 600;
   }
 }
 body .features .left h2 span {
@@ -340,25 +324,23 @@ body .features .left p {
   font-size: 16px;
   font-weight: 400;
 }
+body .features .right .iconCard .number {
+  color: #4d4d4d;
+  font-weight: 700;
+}
 @media (min-width: 992px) {
   body .features .right .iconCard .number {
-    color: #4d4d4d;
     font-size: 28px;
-    font-weight: 700;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .features .right .iconCard .number {
-    color: #4d4d4d;
     font-size: 24px;
-    font-weight: 700;
   }
 }
 @media (max-width: 768px) {
   body .features .right .iconCard .number {
-    color: #4d4d4d;
     font-size: 20px;
-    font-weight: 700;
   }
 }
 body .features .right .iconCard .name {
@@ -379,7 +361,7 @@ body .marketing {
     font-weight: 600;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body .marketing .top {
     width: 80%;
   }
@@ -513,7 +495,7 @@ body footer .right .content i {
     left: 13%;
   }
 }
-@media (max-width: 991.86px) {
+@media (max-width: 991.86px) and (min-width: 767px) {
   body footer .right .content i {
     position: absolute;
     top: 6px;
